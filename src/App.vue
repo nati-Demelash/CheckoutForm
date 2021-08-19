@@ -1,26 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+ <TheHeader/>
+ <checkout-form/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import TheHeader from './components/TheHeader.vue'
+import CheckoutForm from './components/CheckoutForm.vue'
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    TheHeader,
+    CheckoutForm
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  margin:0;
+  padding:0;
+}
+header {
+  width: 100%;
+  margin:10px;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+header .logo {
+  padding: 10px;
+  /* margin: 10px 13rem; */
+}
+
+header .logo img{
+   width: 60px;
 }
 </style>
